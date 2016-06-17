@@ -1,49 +1,270 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
-	<head>
-		<title>nativeDroid II - jQueryMobile Template</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <head>
+        <title>nativeDroid II - jQueryMobile Template</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
-		<link rel="stylesheet" href="/nativeDroid2/vendor/waves/waves.min.css" />
-		<link rel="stylesheet" href="/nativeDroid2/vendor/wow/animate.css" />
-		<link rel="stylesheet" href="/nativeDroid2/css/nativedroid2.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
+        <link rel="stylesheet" href="/nativeDroid2/vendor/waves/waves.min.css" />
+        <link rel="stylesheet" href="/nativeDroid2/vendor/wow/animate.css" />
+        <link rel="stylesheet" href="/nativeDroid2/css/nativedroid2.css" />
 
-		<meta name="mobile-web-app-capable" content="yes">
-	 	<meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <style>
+            /* Prevent FOUC */
+            body { opacity: 0; }
+        </style>
 
-	</head>
-	<body>
+    </head>
+    <body class="clr-accent-lime">
 
-		<div data-role="page">
+        <div data-role="page" class="nd2-no-menu-swipe">
 
-			<nd2-include data-src="/nativeDroid2/examples/fragments/panel.left.html"></nd2-include>
+            <nd2-include data-src="/nativeDroid2/examples/fragments/panel.left.html"></nd2-include>
 
-			<div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom' data-display="overlay">
-				<nd2-include data-src="/nativeDroid2/examples/fragments/bottom.sheet.html"></nd2-include>
-			</div>
 
-			<div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
-				<a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
-				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
-				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Page Title</h1>
-			</div>
+            <div data-role="header" data-position="fixed" class="wow fadeIn">
+                <a href="#leftpanel" class="ui-btn ui-btn-left"><i class="zmdi zmdi-menu"></i></a>
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>Tabs</h1>
 
-			<div role="main" class="ui-content" data-inset="false">
-				<p>(home)</p>
-			</div>
+                <ul data-role="nd2tabs" data-swipe="true">
+                    <li data-tab="holiday" data-tab-active="true">Procura-se</li>
+                    <li data-tab="work">Encontrado</li>
+                    <li data-tab="friends">Ado&ccedil;&atilde;o</li>
+                </ul>
 
-		</div>
+            </div>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-		<script src="/nativeDroid2/vendor/waves/waves.min.js"></script>
-		<script src="/nativeDroid2/vendor/wow/wow.min.js"></script>
-		<script src="/nativeDroid2/js/nativedroid2.js"></script>
-		<script src="/nativeDroid2/nd2settings.js"></script>
+            <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 
-	</body>
+                <div data-role="nd2tab"
+                     data-tab="friends">
+
+
+                    <ul data-role="listview" data-icon="false">
+                        <li data-role="list-divider">
+                            Friends
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/people/1/" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Ethel Chancy</h2>
+                                <p>ehtel.chancy@example.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Lorean Gainer</h2>
+                                <p>lorean87@mail.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/people/3/" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Juliet Gieseke</h2>
+                                <p>flowerpower69@rainbow.com</p>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div data-role="nd2tab"
+                     data-tab="work">
+
+
+                    <ul data-role="listview" data-icon="false">
+                        <li data-role="list-divider">
+                            Work
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/people/6/" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Gale Cecil</h2>
+                                <p>gale.cecil@company.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/people/5/" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Bernard Desrosier</h2>
+                                <p>bernhard.desrosier@company.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/people/7/" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Emerita Scholl</h2>
+                                <p>emerita.scholl@company.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/people/8/" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Elmer Eyer</h2>
+                                <p>elmer.eyer@company.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/people/9/" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Shona Mckibben</h2>
+                                <p>shona.mckibben@company.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="//lorempixel.com/150/150/people/10/" class="ui-thumbnail ui-thumbnail-circular" />
+                                <h2>Hilma Mercer</h2>
+                                <p>hilma.mercer@company.com</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div data-role="nd2tab" data-tab="holiday">
+                    <!-- Simple Card with Title !-->
+
+                    <div class="nd2-card">
+
+                        <div class="card-title has-avatar">
+                            <img class="card-avatar" src="//lorempixel.com/200/200/people/9/">
+                            <h3 class="card-primary-title">Bocudo</h3>
+                            <h5 class="card-subtitle">Campo Grande, MS</h5>
+                        </div>
+
+                        <div class="card-media">
+                            <img src="/nativeDroid2/img/cao1.jpg">
+                        </div>
+
+                        <div class="card-supporting-text has-action">
+                            <strong>Pessoal ajudem a divulgar</strong>, este lindo cão desapareceu dia 29/08 e seus donos estão desesperados a sua procura.
+                        </div>
+
+                        <div class="card-action">
+                            <div class="row between-xs">
+                                <div class="col-xs-4">
+                                    <div class="box">
+                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mic'></i></a>
+                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-videocam'></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-8 align-right">
+                                    <div class="box">
+                                        <a href="#" class="ui-btn ui-btn-inline">Action</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Simple Card No Media !-->
+
+                    <div class="nd2-card">
+
+                        <div class="card-title has-supporting-text">
+                            <h3 class="card-primary-title">Beethoven</h3>
+                            <h5 class="card-subtitle">Campo Grande, MS</h5>
+                        </div>
+
+                        <div class="card-media">
+                            <img src="/nativeDroid2/img/cao2.jpg">
+                        </div>
+                        
+                        <div class="card-supporting-text has-action has-title">
+                            A biomaterial is any matter, surface, or construct that interacts with biological systems. As a science, biomaterials is about fifty years old. The study of biomaterials is called biomaterials science. It has experienced steady and strong growth over its history, with many companies investing large amounts of money into the development of new products.
+                        </div>
+
+                        <div class="card-action">
+                            <div class="row between-xs">
+                                <div class="col-xs-12">
+                                    <div class="box">
+                                        <a href="#" class="ui-btn ui-btn-inline">Applause</a>
+                                        <a href="#" class="ui-btn ui-btn-inline">Boooh</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Media Card with Actions !-->
+
+                    <div class="nd2-card">
+
+                        <div class="card-media">
+                            <img src="/nativeDroid2/img/examples/card_bg_3.jpg">
+                        </div>
+
+                        <div class="card-action">
+                            <div class="row between-xs">
+                                <div class="col-xs-12 align-right">
+                                    <div class="box">
+                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-favorite'></i></a>
+                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-bookmark'></i></a>
+                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mail-reply zmd-flip-horizontal'></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Media Overlay with Background !-->
+
+                    <div class="nd2-card">
+
+
+                        <div class="card-media">
+                            <img src="/nativeDroid2/img/examples/card_bg_2.jpg">
+
+                            <div class='card-media-overlay with-background'>
+
+                                <div class="card-title has-supporting-text">
+                                    <h3 class="card-primary-title">Power of Lavender</h3>
+                                    <h5 class="card-subtitle">Taken in Provence, France</h5>
+                                </div>
+
+                                <div class="card-action">
+                                    <div class="row between-xs">
+                                        <div class="col-xs-12">
+                                            <div class="box">
+                                                <a href="#" class="ui-btn ui-btn-inline">Action 1</a>
+                                                <a href="#" class="ui-btn ui-btn-inline">Action 2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+        <script src="/nativeDroid2/vendor/waves/waves.min.js"></script>
+        <script src="/nativeDroid2/vendor/wow/wow.min.js"></script>
+        <script src="/nativeDroid2/js/nativedroid2.js"></script>
+        <script src="/nativeDroid2/nd2settings.js"></script>
+
+    </body>
 </html>
