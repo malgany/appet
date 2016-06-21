@@ -29,7 +29,7 @@
                 <h1 class="wow fadeIn" data-wow-delay='0.4s'>Tabs</h1>
 
                 <ul data-role="nd2tabs" data-swipe="true">
-                    <li data-tab="holiday" data-tab-active="true">Procura-se</li>
+                    <li data-tab="desaparecidos" data-tab-active="true">Desaparecidos</li>
                     <li data-tab="work">Encontrado</li>
                     <li data-tab="friends">Ado&ccedil;&atilde;o</li>
                 </ul>
@@ -126,136 +126,10 @@
 
                 </div>
 
-                <div data-role="nd2tab" data-tab="holiday">
-                    <!-- Simple Card with Title !-->
-
-                    <div class="nd2-card">
-
-                        <div class="card-title has-avatar">
-                            <img class="card-avatar" src="//lorempixel.com/200/200/people/9/">
-                            <h3 class="card-primary-title">Bocudo</h3>
-                            <h5 class="card-subtitle">Campo Grande, MS</h5>
-                        </div>
-
-                        <div class="card-media">
-                            <img src="/nativeDroid2/img/cao1.jpg">
-                        </div>
-
-                        <div class="card-supporting-text has-action">
-                            <strong>Pessoal ajudem a divulgar</strong>, este lindo cão desapareceu dia 29/08 e seus donos estão desesperados a sua procura.
-                        </div>
-
-                        <div class="card-action">
-                            <div class="row between-xs">
-                                <div class="col-xs-4">
-                                    <div class="box">
-                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mic'></i></a>
-                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-videocam'></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-8 align-right">
-                                    <div class="box">
-                                        <a href="#" class="ui-btn ui-btn-inline">Action</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Simple Card No Media !-->
-
-                    <div class="nd2-card">
-
-                        <div class="card-title has-supporting-text">
-                            <h3 class="card-primary-title">Beethoven</h3>
-                            <h5 class="card-subtitle">Campo Grande, MS</h5>
-                        </div>
-
-                        <div class="card-media">
-                            <img src="/nativeDroid2/img/cao2.jpg">
-                        </div>
-                        
-                        <div class="card-supporting-text has-action has-title">
-                            A biomaterial is any matter, surface, or construct that interacts with biological systems. As a science, biomaterials is about fifty years old. The study of biomaterials is called biomaterials science. It has experienced steady and strong growth over its history, with many companies investing large amounts of money into the development of new products.
-                        </div>
-
-                        <div class="card-action">
-                            <div class="row between-xs">
-                                <div class="col-xs-12">
-                                    <div class="box">
-                                        <a href="#" class="ui-btn ui-btn-inline">Applause</a>
-                                        <a href="#" class="ui-btn ui-btn-inline">Boooh</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Media Card with Actions !-->
-
-                    <div class="nd2-card">
-
-                        <div class="card-media">
-                            <img src="/nativeDroid2/img/examples/card_bg_3.jpg">
-                        </div>
-
-                        <div class="card-action">
-                            <div class="row between-xs">
-                                <div class="col-xs-12 align-right">
-                                    <div class="box">
-                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-favorite'></i></a>
-                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-bookmark'></i></a>
-                                        <a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mail-reply zmd-flip-horizontal'></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Media Overlay with Background !-->
-
-                    <div class="nd2-card">
-
-
-                        <div class="card-media">
-                            <img src="/nativeDroid2/img/examples/card_bg_2.jpg">
-
-                            <div class='card-media-overlay with-background'>
-
-                                <div class="card-title has-supporting-text">
-                                    <h3 class="card-primary-title">Power of Lavender</h3>
-                                    <h5 class="card-subtitle">Taken in Provence, France</h5>
-                                </div>
-
-                                <div class="card-action">
-                                    <div class="row between-xs">
-                                        <div class="col-xs-12">
-                                            <div class="box">
-                                                <a href="#" class="ui-btn ui-btn-inline">Action 1</a>
-                                                <a href="#" class="ui-btn ui-btn-inline">Action 2</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
+                <div data-role="nd2tab" data-tab="desaparecidos" id="tab-desaparecidos">
+                    
                 </div>
-
             </div>
-
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -265,6 +139,13 @@
         <script src="/nativeDroid2/vendor/wow/wow.min.js"></script>
         <script src="/nativeDroid2/js/nativedroid2.js"></script>
         <script src="/nativeDroid2/nd2settings.js"></script>
-
+        
+        <script src="/nativeDroid2/js/Desaparecidos.js"></script>
+        <script src="/nativeDroid2/js/HtmlCards.js"></script>
+        
+        <script>
+            var carrega = new Desaparecidos();
+            carrega.carregaListaDesaparecidos();
+        </script>
     </body>
 </html>
