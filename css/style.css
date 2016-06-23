@@ -1,0 +1,6 @@
+.button-flutuante {
+    z-index: 5;
+    right: 5%;
+    bottom: 5%;
+    position: fixed;
+}

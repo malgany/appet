@@ -4,6 +4,8 @@ function Desaparecidos() {
     
     function carregaListaDesaparecidos() {
         
+        
+        
         var html_cards = new HtmlCards();
         html_cards.setTitulo("Bocudo");
         html_cards.setSubTitulo("Campo Grande, MS");
@@ -11,6 +13,6 @@ function Desaparecidos() {
         html_cards.setTexto("<strong>Pessoal ajudem a divulgar</strong>, este lindo cão desapareceu dia 29/08 e seus donos estão desesperados a sua procura.");
 
         var html = html_cards.showHtml();
-        $("#tab-desaparecidos").html(html);
+        $("#tab-desaparecidos").append(html);
     }
 }
