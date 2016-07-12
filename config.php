@@ -4,7 +4,7 @@ if ($_SERVER["HTTP_HOST"] != "localhost") {
     $host = "127.0.0.1";
     $login = "root";
     $senha = "";
-    $db = "aprenda_online";
+    $db = "appet";
 
     ini_set('display_errors', 'On');
     error_reporting(E_ERROR);
