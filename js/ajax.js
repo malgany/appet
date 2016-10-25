@@ -1,6 +1,5 @@
-var host = "http://localhost/nativeDroid2/";
+var host = "http://localhost/projects/AppetServer/";
 
-// funcoes nativas jquery Ajax
 function ajx(param) {
     var url = host + "ajax.php";
     var data = param;
@@ -22,6 +21,10 @@ function montaUrlComParam(controller, action) {
     return JSON.parse(JSON.stringify($('form').serializeObject()).slice(0,-1) + ',"controller":"'+controller+'","action":"'+action+'"}');
 }
 
+function montaUrl(controller, action) {
+    return JSON.parse('{"controller":"'+controller+'","action":"'+action+'"}');
+}
+
 $.fn.serializeObject = function()
 {
     var o = {};
@@ -38,3 +41,9 @@ $.fn.serializeObject = function()
     });
     return o;
 };
+
+function dataFormatada(data) {
+    var split = data.slice(0, 10).split('-');
+    var novadata = split[2] + "/" +split[1]+"/"+split[0];
+    return novadata;   
+}

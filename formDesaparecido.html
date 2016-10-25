@@ -43,7 +43,10 @@
                         <div class="col-xs-12 col-sm-12 col-md-4">
                             <div class="box">
                                 
-                                <label for="for_nome">Nome:</label>
+                                <label for="for_nome">Nome do dono/responsável:</label>
+                                <input type="text" name="nome_dono" id="nome_dono" value="" data-clear-btn="true" placeholder="">
+                                
+                                <label for="for_nome">Nome do animal:</label>
                                 <input type="text" name="nome" id="nome" value="" data-clear-btn="true" placeholder="Ex: Beethoven">
 
                                 <label for="for_idade">Idade:</label>
@@ -62,16 +65,27 @@
                                 <label for="for_cor">Cor:</label>
                                 <input type="text" name="cor" id="cor" value="" data-clear-btn="true" placeholder="Informe a cor do seu pet">
 
-                                <label for="for_porte" class="select">Porte</label>
-                                <select name="porte" id="porte" data-native-menu="false">
-                                    <option value="">Selecione o porte</option>
-                                    <option value="mini">Mini</option>
-                                    <option value="pequeno">Pequeno</option>
-                                    <option value="pequeno_medio">Pequeno/Médio</option>
-                                    <option value="medio">Médio</option>
-                                    <option value="grande">Grande</option>
-                                    <option value="gigante">Gigante</option>
-                                </select>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-4">
+                                        <label for="for_porte" class="select">Porte</label>
+                                        <select name="porte" id="porte" data-native-menu="false">
+                                            <option value="">Selecione o porte</option>
+                                            <option value="mini">Mini</option>
+                                            <option value="pequeno">Pequeno</option>
+                                            <option value="pequeno_medio">Pequeno/Médio</option>
+                                            <option value="medio">Médio</option>
+                                            <option value="grande">Grande</option>
+                                            <option value="gigante">Gigante</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-4">
+                                        <label for="for_sexo" class="select">Sexo</label>
+                                        <select name="sexo" id="sexo" data-native-menu="false">
+                                            <option value="macho">macho</option>
+                                            <option value="fêmea">fêmea</option>
+                                        </select>
+                                    </div>
+                                </div>
 
                                 <label for="inputMonth">Data desaparecimento:</label>
                                 <input type="date" name="data_desaparecimento" id="data_desaparecimento" value="" data-clear-btn="true" placeholder="">
@@ -80,7 +94,7 @@
                                 <input type="text" name="local" id="cor" value="" data-clear-btn="true" placeholder="Rua/Av./Bairro">
                                 
                                 <label for="inputDatetime">Telefone 1:</label>
-                                <input type="tel" name="telefone1" id="telefone1" value="" data-clear-btn="true" placeholder="">
+                                <input type="tel" name="telefone" id="telefone" value="" data-clear-btn="true" placeholder="">
                                 
                                 <label for="inputDatetime">Telefone 2:</label>
                                 <input type="tel" name="telefone2" id="telefone2" value="" data-clear-btn="true" placeholder="">
@@ -117,6 +131,9 @@
 
         <script>
             var desaparecidos = new Desaparecidos();
+            $( document ).ready(function() {
+                //desaparecidos
+            });
         </script>
     </body>
 </html>
